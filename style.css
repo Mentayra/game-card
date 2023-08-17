@@ -1,0 +1,138 @@
+@import url("./confeti.css");
+
+*,
+*::before
+*::after {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+}
+
+.game-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.container {
+    max-width: 1250;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header{
+    padding: 15px 0;
+}
+
+.header-title {
+    text-align: center;
+    margin: 0;
+    color: rgb(155, 168, 168);
+}
+
+.game-section {
+    padding-top: 50px;
+    padding-left: 600px;
+}
+
+.game-section_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+.game-menu_title {
+    margin: 0;
+    margin-bottom: 0;
+    text-align: center;   
+    color: azure;
+}
+
+.game-menu_difficult-btn {
+    display: flex;
+    flex-direction: column;
+    padding-left: 400px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: black;
+    transition: background-color .3 ease-in-out, color .3s ease-in-out;
+}
+
+.game-menu_difficult-btn:not(:last-child){
+    margin-bottom: 9px;
+}
+
+.game-menu_difficult-btn {
+    padding: 15px 20px;
+    background-color: aquamarine;
+}
+
+.game-menu_difficult-btn:hover{
+    transition: background-color .3 ease-in-out, color .3s ease-in-out;
+    background-color: rgb(238, 0, 0);
+    color: rgb(178, 207, 207);
+}
+
+.game-table {
+    max-width: 500px;
+    display: inline-flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.game-card{
+    width: 50px;
+    height: 90px;
+    flex: 0 0 23%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    border-radius: 5px;
+    transition: all 0.2 linear;
+    margin: 1%;
+}
+
+.game-card i {
+    font-size: 40px;
+    display: none;
+}
+
+.game-card i+i {
+    display:block;
+}
+
+.game-card.flip {
+    background: #5dc6ff !important;
+    transform: perspective(100px) rotateY(180deg)
+}
+
+.game-card.flip i {
+    display: block;
+}
+
+.game-card.flip i+i {
+    display: none;
+}
+
+.game-card.succesfully {
+    background: darkgreen  !important;
+}
+
+.game-card:hover {
+    background: azure;
+}
